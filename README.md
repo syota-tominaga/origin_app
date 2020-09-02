@@ -1,24 +1,58 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Column   | Type   | Options     |
+| -------- | ------ | ----------- |
+| name     | string | null: false |
+| email    | string | null: false |
+| password | string | null: false |
 
-* Ruby version
+### Association
+- has_many :memories
 
-* System dependencies
 
-* Configuration
+## memories テーブル
 
-* Database creation
+| Column     | Type       | Options                        |
+| ---------- | ------ ----| -----------------------------  |
+| money      | string     | null: false                    |
+| goods_name | string     | null: false                    |
+| user_id    | references | null: false, foreign_key: true |
+| set_id     | references | null: false, foreign_key: true |
 
-* Database initialization
+### Association
+- belongs_to :user
+- has_one    :goal
+- has_meny   :sets
 
-* How to run the test suite
+## sets テーブル
 
-* Services (job queues, cache servers, search engines, etc.)
+| Column      | Type       | Options     |
+| ----------- | ---------- | ----------- |
+| set_money   | string     | null: false |
+| set_goods   | string     | null: false |
 
-* Deployment instructions
+### Association
+- belongs_to :memory
 
-* ...
+## goals テーブル
+
+| Column  | Type          | Options                        |
+| ------- | ------------- | ------------------------------ |
+| goal_money | string     |                                |
+| goal_goods | string     | null: false, foreign_key: true |
+| memory_id  | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :memory
+
+## tweets テーブル
+
+| Column  | Type       | Options     |
+| ------- | ---------- | ----------- |
+| title   | string     | null: false |
+| text    | string     | null: false |
+| image   |            | null: false |
+
+### Association
