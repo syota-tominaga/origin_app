@@ -15,10 +15,10 @@ ActiveRecord::Schema.define(version: 2020_09_04_035443) do
   create_table "goals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "goal_money"
     t.string "goal_goods"
-    t.bigint "memory_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["memory_id"], name: "index_goals_on_memory_id"
+    t.index ["user_id"], name: "index_goals_on_user_id"
   end
 
   create_table "memories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -43,6 +43,6 @@ ActiveRecord::Schema.define(version: 2020_09_04_035443) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "goals", "memories"
+  add_foreign_key "goals", "users"
   add_foreign_key "memories", "users"
 end

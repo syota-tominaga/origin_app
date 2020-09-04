@@ -1,11 +1,11 @@
-<%= form_with url: memory_goals_path, local: true do |f| %>
+<%= form_with url: goals_path, local: true do |f| %>
 <div class = "goal-page">
   <div class = "goal-page-object">  
-    <div class = "goal-item">
+    <div class = "goal-goods">
       <%= f.text_area :goal_goods, class: "goal-goods-field", placeholder: "買いたい物"%>
     </div>
-    <div class = "goal-goods">
-      <%= f.text_area :goal_goods, class: "goal-goods-field", placeholder: "目標金額"%>
+    <div class = "goal-money">
+      <%= f.text_area :goal_money, class: "goal-goods-field", placeholder: "目標金額"%>
     </div>
   </div>
   <%= f.submit "登録", class: "goal-send-btn" %>

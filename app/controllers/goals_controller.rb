@@ -6,7 +6,7 @@ class GoalsController < ApplicationController
   def create
     @goal = Goal.new(goal_params)
     if @goal.save
-      redirect_to memory_goals_path
+      redirect_to goals_path
     else
       binding.pry
       render 'new'
@@ -15,6 +15,6 @@ class GoalsController < ApplicationController
 
   private
   def goal_params
-    params.permit(:goal_money, :goal_goods, :memory_id)
+    params.permit(:goal_money, :goal_goods).merge(user_id: current_user.id)
   end
 end
