@@ -1,17 +1,13 @@
-
-
-<%= form_with url: memories_path, local: true do |f| %>
+<%= form_with url: memories_path(memory.id), local: true do |f| %>
 <div class = "money-page">
   <div class = "money-page-object">
     <div class = "money ">
       <%= f.text_area :money, class:"money-field", id:"money-name", placeholder:"つもり貯金額" %>
     </div>
     <div class = "goods ">
-      <%= f.text_area :goods_name, class:"money-field", id:"money-name", placeholder:"つもりアイテム" %>
+      <%= f.text_area :goods_name, class:"money-field", id:"goods-name", placeholder:"つもりアイテム" %>
     </div>
   </div>
-  <div class = "money-page-send">
-    <%= f.submit "貯金", class: "money-send-btn" %>
-  </div>
+  <%= f.submit "貯金", class: "money-send-btn" %>
 </div>
 <% end %>
