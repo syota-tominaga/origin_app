@@ -16,6 +16,10 @@ class MemoriesController < ApplicationController
     end
   end
 
+  def show
+    @memories = Memory.all
+  end
+
   private
   def memory_params
     params.permit(:money, :goods_name).merge(user_id: current_user.id)
