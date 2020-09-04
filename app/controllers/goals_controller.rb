@@ -5,10 +5,7 @@ class GoalsController < ApplicationController
 
   def create
     @goal = Goal.new(goal_params)
-    if @goal.save
-      redirect_to goals_path
-    else
-      binding.pry
+    unless @goal.save
       render 'new'
     end
   end
