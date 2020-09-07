@@ -30,6 +30,16 @@
     </ul>
   </div>
   <%# //FURIMAの特徴 %>
+  <div class = "goal-contents">
+    <% @goals.each do |goal| %>
+      <div class = "goal-goods-content">
+        <%= goal.goal_goods %>
+      </div>
+      <div class = "goal-money-content">
+        <%= goal.goal_money %>
+      </div>
+    <% end %>
+  </div>
 
   <%# 商品一覧 %>
   <div class='item-contents'>

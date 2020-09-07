@@ -1,7 +1,7 @@
 class MemoriesController < ApplicationController
   def index
     @memory = Memory.all.sum(:money)
-    @goals = Goal.all
+    @goals = Goal.includes(:user)
   end
 
   def new
