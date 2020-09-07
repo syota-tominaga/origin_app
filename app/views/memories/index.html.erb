@@ -38,6 +38,9 @@
       <div class = "goal-money-content">
         <%= goal.goal_money %>
       </div>
+      <% if @memory >= goal.goal_money %>
+        <%= link_to "目標達成！！！クリックしてね", goal_path(goal), method: :get %>
+      <% end %>
     <% end %>
   </div>
 
