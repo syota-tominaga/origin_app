@@ -1,6 +1,7 @@
 class MemoriesController < ApplicationController
   def index
     @memory = Memory.all.sum(:money)
+    @goals = Goal.all
   end
 
   def new
@@ -16,8 +17,17 @@ class MemoriesController < ApplicationController
     end
   end
 
-  def show
-    @memories = Memory.all
+  def edit
+    @memories = Memory.includes(:user)
+  end
+
+  def destroy
+    @memory = Memory.find(params[:id])
+    unless @memory.destroy
+      render 'edit'
+    else
+      redirect_to root_path
+    end
   end
 
   private

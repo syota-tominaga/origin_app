@@ -1,0 +1,11 @@
+<% @memories.each do |memory| %>
+  <li class = "memo-list">
+    <div class = "memo-goods-name">
+      <%= memory.goods_name %>
+    </div>
+    <div class = "memo-money">
+      <%= memory.money %>
+    </div>
+    <%= link_to "削除", memory_path(memory.id), method: :delete %>
+  </li>
+<% end %>
