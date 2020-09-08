@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'memories#index'
   resources :memories, only: [:index, :new, :create, :edit, :destroy]
   resources :goals, only: [:new, :create, :show] do
-    resources :tweets, only: [:new, :create]
+    resources :tweets, only: [:new, :create, :show]
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

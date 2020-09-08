@@ -55,9 +55,11 @@ ActiveRecord::Schema.define(version: 2020_09_08_030628) do
     t.string "title", null: false
     t.string "text", null: false
     t.bigint "goal_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["goal_id"], name: "index_tweets_on_goal_id"
+    t.index ["user_id"], name: "index_tweets_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -77,4 +79,5 @@ ActiveRecord::Schema.define(version: 2020_09_08_030628) do
   add_foreign_key "goals", "users"
   add_foreign_key "memories", "users"
   add_foreign_key "tweets", "goals"
+  add_foreign_key "tweets", "users"
 end
