@@ -1,0 +1,15 @@
+<div class = "contents">
+  <div class = "title">
+    <%= @tweet.title %>
+  </div>
+  <div class = "text">
+    <%= @tweet.text %>
+  </div>
+  <div class = "image">
+    <%= image_tag @tweet.image %>
+  </div>
+  <% if user_signed_in? && current_user.id == @tweet.user_id %>
+    <%= link_to '編集', edit_tweet_path(@tweet.id), method: :get, class: "edit" %>
+    <%= link_to '削除', tweet_path(@tweet.id), method: :delete, class:'destroy' %>
+  <% end %>
+</div>
