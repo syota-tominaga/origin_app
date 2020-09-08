@@ -1,0 +1,14 @@
+<div class = "contents">
+  <%= form_with model: @tweet, url: goal_tweets_path, local: true do |f| %>
+    <div class = "title">
+      <%= f.text_area :title, class: "title-field", pliceholder: "title" %>
+    </div>
+    <div class = "text">
+      <%= f.text_area :text, class: "textarea", pliceholder: "text" %>
+    </div>
+    <div class = "image">
+      <%= f.file_field :image, class: "image-field" %>
+    </div>
+    <%= f.submit "SEND", class: "send-btn" %>
+  <% end %>
+</div>
