@@ -1,0 +1,20 @@
+<div class='top-btn'>
+  <%= link_to 'トップページに戻る', root_path, method: :get %>
+</div>
+<% @tweets.each do |tweet| %>
+<div class = 'top-mypage'>
+  <h1 class = ctop-text>記録</h1>
+  <li class='list'>
+    <%= link_to edit_tweet_path(tweet.id), method: :get do %>
+    <div class='item-img-content'>
+      <%= image_tag tweet.image, class: "item-img" %>
+    </div>
+    <div class='item-info'>
+      <h3 class='item-name'>
+        <%= tweet.title %>
+      </h3>
+    </div>
+    <% end %>
+  </li>
+</div>
+<% end %>

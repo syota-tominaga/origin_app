@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   resources :goals, only: [:new, :create, :show] do
     resources :tweets, only: [:new, :create]
   end
-  resources :tweets, only: [:show, :update, :edit, :destroy]
+  resources :tweets, only: [:index, :show, :update, :edit, :destroy]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

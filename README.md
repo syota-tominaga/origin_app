@@ -19,22 +19,10 @@
 | money      | string     | null: false                    |
 | goods_name | string     | null: false                    |
 | user_id    | references | null: false, foreign_key: true |
-| set_id     | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :user
 - has_one    :goal
-- has_meny   :sets
-
-## sets テーブル
-
-| Column      | Type       | Options     |
-| ----------- | ---------- | ----------- |
-| set_money   | string     | null: false |
-| set_goods   | string     | null: false |
-
-### Association
-- belongs_to :memory
 
 ## goals テーブル
 

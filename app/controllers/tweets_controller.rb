@@ -1,4 +1,9 @@
 class TweetsController < ApplicationController
+
+  def index
+    @tweets = Tweet.includes(:user)
+  end
+
   def new
     @goal = Goal.new
   end

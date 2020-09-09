@@ -2,7 +2,7 @@ class MemoriesController < ApplicationController
   def index
     @memory = Memory.all.sum(:money)
     @goals = Goal.includes(:user)
-    @tweets = Tweet.includes(:goal)
+    @tweets = Tweet.includes(:user)
   end
 
   def new
