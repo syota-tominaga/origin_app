@@ -5,5 +5,6 @@ class Memory < ApplicationRecord
     validates :money
     validates :goods_name
   end
-
+  
+  validates :money, numericality: { only_integer: true }
 end

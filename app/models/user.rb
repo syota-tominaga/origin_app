@@ -7,4 +7,6 @@ class User < ApplicationRecord
   has_many :memories
   has_many :goals
   has_many :tweets
+
+  validates :name, presence: true
 end
