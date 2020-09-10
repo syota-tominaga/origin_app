@@ -1,0 +1,18 @@
+.contents{
+  background-color: lightsteelblue;
+  color: lightgoldenrodyellow;
+}
+
+.title{
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.top-text{
+  font-size: 20px;
+  margin: 10px;
+}
+
+.content{
+  text-align: center;
+}

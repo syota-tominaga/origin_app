@@ -1,20 +1,20 @@
-.money-page{
+.goal-page{
   width: 100vw;
   padding: 5vh 15vw;
   text-align: center;
   background-color: lightsteelblue;
 }
 
-.money-page-object{
+.goal-page-object{
   display: flex;
   justify-content: center;
 }
 
-.money{
+.goal-goods{
   margin: 30px;
 }
 
-.money-field{
+.goal-goods-field{
   padding: 6px;
   border-radius: 4px;
   background-color: whitesmoke;
@@ -23,11 +23,11 @@
   resize: none;
 }
 
-.goods{
+.goal-money{
   margin: 30px;
 }
 
-.money-send-btn {
+.goal-send-btn {
   display       : inline-block;
   border-radius : 5%; 
   font-size     : 13pt;

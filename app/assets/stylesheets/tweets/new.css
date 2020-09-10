@@ -1,20 +1,15 @@
-.money-page{
-  width: 100vw;
-  padding: 5vh 15vw;
+.contents{
+  background-color:lightsteelblue;
+  height: 400px;
+  align-items: center;
+}
+
+.content{
   text-align: center;
-  background-color: lightsteelblue;
+  padding-top: 30px;
 }
 
-.money-page-object{
-  display: flex;
-  justify-content: center;
-}
-
-.money{
-  margin: 30px;
-}
-
-.money-field{
+.title-field{
   padding: 6px;
   border-radius: 4px;
   background-color: whitesmoke;
@@ -23,11 +18,21 @@
   resize: none;
 }
 
-.goods{
-  margin: 30px;
+.textarea{
+  padding: 6px;
+  border-radius: 4px;
+  background-color: whitesmoke;
+  font-size: 16px;
+  border: gray 2px solid;
+  resize: none;
 }
 
-.money-send-btn {
+.image{
+  padding: 10 0px;
+}
+
+.send-btn{
+  margin-top: 10px;
   display       : inline-block;
   border-radius : 5%; 
   font-size     : 13pt;
@@ -40,9 +45,4 @@
   transition    : .3s;
   box-shadow    : 6px 6px 1px #666666;
   border        : 2px solid #cccccc;
-}
-.money-send-btn:hover {
-  box-shadow    : none;
-  color         : lightslategray;
-  background    : white;
 }

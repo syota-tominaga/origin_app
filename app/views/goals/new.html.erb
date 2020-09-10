@@ -1,5 +1,5 @@
-<%= form_with url: goals_path, local: true do |f| %>
 <div class = "goal-page">
+<%= form_with url: goals_path, local: true do |f| %>
   <div class = "goal-page-object">  
     <div class = "goal-goods">
       <%= f.text_area :goal_goods, class: "goal-goods-field", placeholder: "買いたい物"%>
@@ -9,5 +9,5 @@
     </div>
   </div>
   <%= f.submit "登録", class: "goal-send-btn" %>
-</div>
 <% end %>
+</div>

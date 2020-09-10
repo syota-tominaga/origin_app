@@ -1,0 +1,12 @@
+.top{
+  width: 100vw;
+  background-color: lightsteelblue;
+  padding: 30px;
+  font-size: 20px;
+}
+
+.memo-contents{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

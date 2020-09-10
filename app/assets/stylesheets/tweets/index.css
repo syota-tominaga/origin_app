@@ -1,0 +1,10 @@
+.top-contents{
+  padding: 30px;
+  text-align: center;
+}
+
+.top-text{
+  font-size: 20px;
+  font-weight: bold;
+  color: gray
+}
