@@ -1,6 +1,6 @@
-アプリケーション名：貯金アップり
+アプリケーション名：貯金アップリ
 
-URL：
+URL：https://origin-app-28464.herokuapp.com/
 
 テスト用アカウント
 
