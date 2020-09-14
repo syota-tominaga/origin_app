@@ -5,7 +5,7 @@ URL：https://origin-app-28464.herokuapp.com/
 テスト用アカウント
 
   basic認証：id,origin  pass,5656
-  テスト用アカウント：email,  password,
+  テスト用アカウント：email,aaa@aaa  password,aaaaa0
 
 利用方法
 
@@ -49,7 +49,7 @@ URL：https://origin-app-28464.herokuapp.com/
 ## memories テーブル
 
 | Column     | Type       | Options                        |
-| ---------- | ------ ----| -----------------------------  |
+| ---------- | -----------| -----------------------------  |
 | money      | string     | null: false                    |
 | goods_name | string     | null: false                    |
 | user_id    | references | null: false, foreign_key: true |

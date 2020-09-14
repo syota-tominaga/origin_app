@@ -1,6 +1,7 @@
 class MemoriesController < ApplicationController
   def index
-    @memory = Memory.all.sum(:money)
+    @memories = Memory.where(user_id: current_user.id)
+    @memory = @memories.all.sum(:money)
     @goals = Goal.includes(:user)
     @tweets = Tweet.includes(:goal)
   end
@@ -19,7 +20,8 @@ class MemoriesController < ApplicationController
   end
 
   def edit
-    @memories = Memory.includes(:user)
+    @memories = Memory.where(user_id: current_user.id)
+    @memory = @memories.all
   end
 
   def destroy

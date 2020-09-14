@@ -3,10 +3,10 @@
   <% @memories.each do |memory| %>
     <li class = "memo-list">
       <div class = "memo-goods-name">
-        目標商品：<%= memory.goods_name %>
+        商品：<%= memory.goods_name %>
       </div>
       <div class = "memo-money">
-        目標金額：<%= memory.money %>
+        金額：<%= memory.money %>
       </div>
       <%= link_to "削除", memory_path(memory.id), method: :delete %>
     </li>
