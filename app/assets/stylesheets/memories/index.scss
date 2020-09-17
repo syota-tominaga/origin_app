@@ -35,6 +35,11 @@ a {
   transform: translateX(-50%);
 }
 
+.money-save{
+  text-decoration: none;
+  border: 1px solid red($color: #000000);
+}
+
 .feature-lists {
   display: flex;
   justify-content: space-between;
@@ -125,21 +130,6 @@ a {
 .item-img {
   width: 33vh;
   height: 33vh;
-}
-
-.sold-out {
-  position: absolute;
-  top: 40%;
-  width: 100%;
-  text-align: center;
-  background-color: crimson;
-  transform: skewY(-10deg);
-}
-
-.sold-out>span {
-  color: #FFF;
-  font-size: 45px;
-  font: bold;
 }
 
 
