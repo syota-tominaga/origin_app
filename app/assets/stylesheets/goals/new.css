@@ -2,7 +2,7 @@
   width: auto;
   padding: 5vh 15vw;
   text-align: center;
-  background-color: lightsteelblue;
+  background-color: whitesmoke;
 }
 
 .goal-page-object{
@@ -19,7 +19,7 @@
   border-radius: 4px;
   background-color: whitesmoke;
   font-size: 16px;
-  border: gray 2px solid;
+  border: lightsteelblue 2px solid;
   resize: none;
 }
 
@@ -39,7 +39,7 @@
   line-height   : 1em;
   transition    : .3s;
   box-shadow    : 6px 6px 1px #666666;
-  border        : 2px solid #cccccc;
+  border        : 2px solid lightsteelblue;
 }
 .money-send-btn:hover {
   box-shadow    : none;

@@ -1,8 +1,7 @@
 <div class = 'main'>
 
   <%# FURIMAの特徴 %>
-  <div class='feature-contents'>
-    <div class = 'head'>
+  <div class = 'head'>
       <div class = 'mypage'>
         <%= link_to 'マイページ', tweets_path, method: :get %>
       </div>
@@ -10,6 +9,7 @@
       <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
       </div>
     </div>
+  <div class='feature-contents'>
     <h2 class='title'>
       ¥<%= @memory %>
     </h2>
@@ -49,11 +49,11 @@
 
   <div class='item-contents'>
     <h4 class='title'>みんなの記録</h4>
-    <%= link_to '新規投稿商品', "#", class: "subtitle" %>
+    <p class ='subtitle'> 新規投稿 </div>
     <ul class='item-lists'>
       <% @tweets.each do |tweet| %>
       <li class='list'>
-        <%= link_to tweet_path(tweet.id), method: :get do %>
+        <%= link_to tweet_path(tweet.id), method: :get, class: "a-btn" do %>
         <div class='item-img-content'>
           <%= image_tag tweet.image, class: "item-img" %>
         </div>

@@ -1,9 +1,23 @@
 a {
   text-decoration: none;
+  border: solid 2px lightsteelblue;
+  border-radius: 3px;
+  padding: 3px 7px;
+  color: lightsteelblue;
+  font-weight: bold;
+  background-color: white;
+  margin: 5px;
 }
 
 .main {
-  background: #f8f8f8;
+  background-color: #f8f8f8;
+}
+
+.head{
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: lightslategrey;
 }
 
 .list-pict {
